@@ -17,16 +17,16 @@ temp=[]
 print("\n Candidate Elimination algorithm\n")
 
 for i in range(len(a)):
-    if a[i][n]=="Positive":
+    if a[i][n]=="Positive":#put the same as in last column(Positive/Yes)
         for j in range(n):
             if a[i][j]!=s[j]:
                 s[j]='?'
         for j in range(n):
-            for k in range(len(temp)-1):
+            for k in range(len(temp)-1):#len(temp) for wheather dataSet
                 if temp[k][j]!='?' and temp[k][j]!=s[j]:
                     del temp[k] 
         
-    if a[i][n]=="Negative": 
+    if a[i][n]=="Negative": #put the same as in last column(Negative/No)
         for j in range(n):
              if s[j]!=a[i][j] and s[j]!='?': 
                  g[j]=s[j]
