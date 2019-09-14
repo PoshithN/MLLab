@@ -28,7 +28,7 @@ def entropy_of_list(a_list):
     probs = [x / num_instances for x in cnt.values()]     
     return entropy(probs) # Call Entropy:
 
-total_entropy = entropy_of_list(df_tennis['PlayTennis']) 
+total_entropy = entropy_of_list(df_tennis['PlayTennis']) #name of last attribute or column<PlayTennis>
 print("Entropy of given PlayTennis Data Set:",total_entropy) 
 
 
